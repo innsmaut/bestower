@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="local_bestower"
+             translate="label"
+             sortOrder="1000">
+            <label>Bestower</label>
+        </tab>
+        <section id="bestower"
+                 translate="label"
+                 type="text"
+                 sortOrder="1"
+                 showInDefault="1"
+                 showInWebsite="1"
+                 showInStore="1">
+            <label>Gift options</label>
+            <tab>local_bestower</tab>
+            <resource>Magento_Backend::content</resource>
+            <group id="config"
+                   translate="label"
+                   type="text"
+                   sortOrder="1"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Chose options</label>
+                <field id="sum"
+                       translate="label comment"
+                       type="text"
+                       sortOrder="40"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Minimum summ to get a gift</label>
+                    <validate>validate-number</validate>
+                </field>
+                <field id="gift_id"
+                       translate="label comment"
+                       type="text"
+                       sortOrder="40"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Gift item ID</label>
+                    <validate>validate-number</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
